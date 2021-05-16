@@ -1,5 +1,4 @@
-# tkinter-radiobutton
-Tkinterのradiobuttonに関するコード
+# tkinter-listbox
+Tkinterのlistboxに関するコード
 
 # 参考記事
-https://kuroro.blog/python/ztJbt5uabbTBMCGcljHc/
