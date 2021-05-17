@@ -12,8 +12,8 @@ class Application(tk.Frame):
     # 引数へ要素index(位置番号)を指定して、要素が確認できる位置へ移動する。
     def setSee(self):
         # see() : 引数へ要素index(位置番号)を指定して、要素が確認できる位置へ移動する。
-        # see(0) : 0番目の要素index(位置番号)の要素が確認できる位置へ移動する。
-        self.listBox.see(0)
+        # see(11) : 11番目の要素index(位置番号)の要素が確認できる位置へ移動する。
+        self.listBox.see(11)
 
     def __init__(self, master=None):
         # Windowの初期設定を行う。
