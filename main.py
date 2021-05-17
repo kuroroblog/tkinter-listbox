@@ -1,19 +1,18 @@
 import tkinter as tk
 
-
 class Application(tk.Frame):
     # listboxに関する情報を格納する変数
     listBox = None
 
-    # 現在選択中のリストindex(位置番号)を取得する。
+    # 現在選択中の要素index(位置番号)を取得する。
     def getSelect(self):
-        # curselection() : 現在選択中のリストindex(位置番号)を取得。
+        # curselection() : 現在選択中の要素index(位置番号)を取得。
         print(self.listBox.curselection())
 
-    # 引数へリストindex(位置番号)を指定して、リストindex(位置番号)の内容が見える位置へ移動する。
+    # 引数へ要素index(位置番号)を指定して、要素が確認できる位置へ移動する。
     def setSee(self):
-        # see() : 引数へリストindex(位置番号)を指定して、リストindex(位置番号)の内容が見える位置へ移動する。
-        # see(0) : 0番目のリストindex(位置番号)の内容が見える位置へ移動する。
+        # see() : 引数へ要素index(位置番号)を指定して、要素が確認できる位置へ移動する。
+        # see(0) : 0番目の要素index(位置番号)の要素が確認できる位置へ移動する。
         self.listBox.see(0)
 
     def __init__(self, master=None):
@@ -35,8 +34,8 @@ class Application(tk.Frame):
         # height : 高さの設定
         self.listBox = tk.Listbox(frame, height=5)
         for month in ("1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"):
-            # listboxへ選択肢内容を格納する。
-            # insert : listbox内の指定箇所(リストindex(位置番号))へ、選択肢内容を格納する。
+            # listboxへ選択肢要素を格納する。
+            # insert : listbox内の指定箇所(要素index(位置番号))へ、選択肢要素を格納する。
             # tk.END : 末尾を表す。
             self.listBox.insert(tk.END, month)
 
