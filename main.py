@@ -4,15 +4,16 @@ class Application(tk.Frame):
     # listboxに関する情報を格納する変数
     listBox = None
 
-    # 現在選択中の要素index(位置番号)を取得する。
+    # 現在選択中の要素index(位置番号)を取得する関数
     def getSelect(self):
         # curselection() : 現在選択中の要素index(位置番号)を取得。
         print(self.listBox.curselection())
 
-    # 引数へ要素index(位置番号)を指定して、要素が確認できる位置へ移動する。
+    # 引数へ要素index(位置番号)を指定して、要素が確認できる位置へ移動する関数
     def setSee(self):
         # see() : 引数へ要素index(位置番号)を指定して、要素が確認できる位置へ移動する。
-        # see(11) : 11番目の要素index(位置番号)の要素が確認できる位置へ移動する。
+        # indexは0から数える。
+        # see(11) : 12番目の要素要素が確認できる位置へ移動する。
         self.listBox.see(11)
 
     def __init__(self, master=None):
@@ -31,7 +32,7 @@ class Application(tk.Frame):
         # packについて : https://kuroro.blog/python/UuvLfIBIEaw98BzBZ3FJ/
         frame.pack()
 
-        # Frameを親要素として、listbox Widget(Frame)を作成する。
+        # Frameを親要素として、listbox Widgetを作成する。
         # height : 高さの設定
         self.listBox = tk.Listbox(frame, height=5)
         for month in ("1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"):
@@ -47,7 +48,7 @@ class Application(tk.Frame):
         # frame Widget(Frame)を親要素として、button Widgetを作成する。
         # text : テキスト情報
         # width : ボタンの幅設定
-        # command : ボタンをクリックした場合に、実行する関数を設定する。
+        # command : ボタンをクリックした場合に、実行する関数を設定する。self.getSelectとする。
         # buttonについて : https://kuroro.blog/python/oFju6EngDtcYtIiMIDf1/
         checkSelectButton = tk.Button(frame, text="選択確認", width=15, command=self.getSelect)
 
@@ -58,7 +59,7 @@ class Application(tk.Frame):
         # frame Widget(Frame)を親要素として、button Widgetを作成する。
         # text : テキスト情報
         # width : ボタンの幅設定
-        # command : ボタンをクリックした場合に、実行する関数を設定する。
+        # command : ボタンをクリックした場合に、実行する関数を設定する。self.setSeeとする。
         # buttonについて : https://kuroro.blog/python/oFju6EngDtcYtIiMIDf1/
         moveButton = tk.Button(frame, text="移動", width=15, command=self.setSee)
 
