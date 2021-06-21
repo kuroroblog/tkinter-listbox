@@ -33,7 +33,7 @@ class Application(tk.Frame):
         frame.pack()
 
         # frame Widget(Frame)を親要素として、listbox Widgetを作成する。
-        # height : 高さの設定
+        # height : 選択肢の表示数を設定
         self.listBox = tk.Listbox(frame, height=5)
         for month in ("1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"):
             # listboxへ選択肢を格納する。
