@@ -4,16 +4,16 @@ class Application(tk.Frame):
     # listboxに関する情報を格納する変数
     listBox = None
 
-    # 現在選択中の要素index(位置番号)を取得する関数
+    # 現在選択中のindex(位置番号)を取得する関数
     def getSelect(self):
-        # curselection() : 現在選択中の要素index(位置番号)を取得。
+        # curselection() : 現在選択中のindex(位置番号)を取得。
         print(self.listBox.curselection())
 
-    # 引数へ要素index(位置番号)を指定して、要素が確認できる位置へ移動する関数
+    # 引数へindex(位置番号)を指定して、選択肢が確認できる位置へ移動する関数
     def setSee(self):
-        # see() : 引数へ要素index(位置番号)を指定して、要素が確認できる位置へ移動する。
-        # indexは0から数える。
-        # see(11) : 12番目の要素要素が確認できる位置へ移動する。
+        # see() : 引数へindex(位置番号)を指定して、選択肢が確認できる位置へ移動する。
+        # index(位置番号)は0から数える。
+        # see(11) : 上から12番目の選択肢が確認できる位置へ移動する。
         self.listBox.see(11)
 
     def __init__(self, master=None):
@@ -28,20 +28,20 @@ class Application(tk.Frame):
         # frameについて : https://kuroro.blog/python/P20XOidA5nh583fYRvxf/
         frame = tk.Frame(self.master)
 
-        # Windowを親要素とした場合に、frame Widgetをどのように配置するのか?
+        # Windowを親要素とした場合に、frame Widget(Frame)をどのように配置するのか?
         # packについて : https://kuroro.blog/python/UuvLfIBIEaw98BzBZ3FJ/
         frame.pack()
 
-        # Frameを親要素として、listbox Widgetを作成する。
+        # frame Widget(Frame)を親要素として、listbox Widgetを作成する。
         # height : 高さの設定
         self.listBox = tk.Listbox(frame, height=5)
         for month in ("1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"):
-            # listboxへ選択肢要素を格納する。
-            # insert : listbox内の指定箇所(要素index(位置番号))へ、選択肢要素を格納する。
+            # listboxへ選択肢を格納する。
+            # insert : listbox内の指定箇所(index(位置番号))へ、選択肢を格納する。
             # tk.END : 末尾を表す。
             self.listBox.insert(tk.END, month)
 
-        # Frameを親要素とした場合に、listbox Widgetをどのように配置するのか?
+        # frame Widget(Frame)を親要素とした場合に、listbox Widgetをどのように配置するのか?
         # packについて : https://kuroro.blog/python/UuvLfIBIEaw98BzBZ3FJ/
         self.listBox.pack()
 
