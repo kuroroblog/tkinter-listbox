@@ -25,7 +25,7 @@ class Application(tk.Frame):
         self.master.geometry("300x200")
 
         # Windowを親要素として、frame Widget(Frame)を作成する。
-        # frameについて : https://kuroro.blog/python/P20XOidA5nh583fYRvxf/
+        # Frameについて : https://kuroro.blog/python/P20XOidA5nh583fYRvxf/
         frame = tk.Frame(self.master)
 
         # Windowを親要素とした場合に、frame Widget(Frame)をどのように配置するのか?
@@ -49,7 +49,7 @@ class Application(tk.Frame):
         # text : テキスト情報
         # width : ボタンの幅設定
         # command : ボタンをクリックした場合に、実行する関数を設定する。self.getSelectとする。
-        # buttonについて : https://kuroro.blog/python/oFju6EngDtcYtIiMIDf1/
+        # Buttonについて : https://kuroro.blog/python/oFju6EngDtcYtIiMIDf1/
         checkSelectButton = tk.Button(frame, text="選択確認", width=15, command=self.getSelect)
 
         # frame Widget(Frame)を親要素とした場合に、button Widgetをどのように配置するのか?
@@ -60,7 +60,7 @@ class Application(tk.Frame):
         # text : テキスト情報
         # width : ボタンの幅設定
         # command : ボタンをクリックした場合に、実行する関数を設定する。self.setSeeとする。
-        # buttonについて : https://kuroro.blog/python/oFju6EngDtcYtIiMIDf1/
+        # Buttonについて : https://kuroro.blog/python/oFju6EngDtcYtIiMIDf1/
         moveButton = tk.Button(frame, text="移動", width=15, command=self.setSee)
 
         # frame Widget(Frame)を親要素とした場合に、button Widgetをどのように配置するのか?
